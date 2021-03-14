@@ -2,6 +2,8 @@ package com.zhiqiangqiao.katas.fibonacci;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -19,5 +21,11 @@ public class FibonacciShould {
   })
   void calculate_fibonacci_numbers(int nth, long expected) {
     assertThat(new Fibonacci().getNumber(nth)).isEqualTo(expected);
+  }
+
+  @Test
+  @Timeout(2)
+  void finish_calculation_in_accepted_time_span() {
+    assertThat(new Fibonacci().getNumber(50)).isGreaterThan(0);
   }
 }
