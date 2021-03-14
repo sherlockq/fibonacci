@@ -9,7 +9,9 @@ public class FibonacciShould {
 
   @ParameterizedTest
   @CsvSource({
-      "1,1"
+      "1,1",
+      "2,1",
+      "3,2"
   })
   void calculate_fibonacci_numbers(int nth, int expected) {
     assertThat(new Fibonacci().getNumber(nth)).isEqualTo(expected);
