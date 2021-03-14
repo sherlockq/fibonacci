@@ -14,9 +14,10 @@ public class FibonacciShould {
       "3,2",
       "4,3",
       "5,5",
-      "10,55"
+      "10,55",
+      "50,12586269025"
   })
-  void calculate_fibonacci_numbers(int nth, int expected) {
+  void calculate_fibonacci_numbers(int nth, long expected) {
     assertThat(new Fibonacci().getNumber(nth)).isEqualTo(expected);
   }
 }
