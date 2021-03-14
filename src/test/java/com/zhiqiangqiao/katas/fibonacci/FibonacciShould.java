@@ -24,7 +24,7 @@ public class FibonacciShould {
   }
 
   @Test
-  @Timeout(2)
+  @Timeout(1)
   void finish_calculation_in_accepted_time_span() {
     assertThat(new Fibonacci().getNumber(50)).isGreaterThan(0);
   }
