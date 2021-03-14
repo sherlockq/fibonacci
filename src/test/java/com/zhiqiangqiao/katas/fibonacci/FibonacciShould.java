@@ -11,7 +11,10 @@ public class FibonacciShould {
   @CsvSource({
       "1,1",
       "2,1",
-      "3,2"
+      "3,2",
+      "4,3",
+      "5,5",
+      "10,55"
   })
   void calculate_fibonacci_numbers(int nth, int expected) {
     assertThat(new Fibonacci().getNumber(nth)).isEqualTo(expected);
